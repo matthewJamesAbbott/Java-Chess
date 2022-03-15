@@ -1,3 +1,5 @@
+package xyz.squig;
+
 public class Board {
     public Board() {
         String board[8][8];

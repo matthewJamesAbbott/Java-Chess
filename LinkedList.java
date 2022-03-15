@@ -17,7 +17,7 @@ public class LinkedList {
 
     public void returnVector() {
         Node temp = head;
-        Vector<String> moveVector = new Vector<String>();
+        Vector<int> moveVector = new Vector<int>();
         while (temp != null){
             moveVector.addElement(x);
             moveVector.addElement(y);
