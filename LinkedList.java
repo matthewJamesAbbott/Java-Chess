@@ -15,12 +15,12 @@ public class LinkedList {
         head = newNode;
     }
 
-    public void returnVector() {
+    public Vector<Integer> returnVector() {
         Node temp = head;
-        Vector<int> moveVector = new Vector<int>();
+        Vector<Integer> moveVector = new Vector<Integer>();
         while (temp != null){
-            moveVector.addElement(x);
-            moveVector.addElement(y);
+            moveVector.addElement(temp.x);
+            moveVector.addElement(temp.y);
             temp = temp.next;
         }
         return moveVector;

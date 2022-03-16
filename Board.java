@@ -1,8 +1,9 @@
 package xyz.squig;
 
 public class Board {
+    public String[][] board = new String[8][8];
     public Board() {
-        String board[8][8];
+
     }
 
     String returnSquare(int x, int y){

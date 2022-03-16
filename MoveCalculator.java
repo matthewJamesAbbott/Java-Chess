@@ -1,3 +1,6 @@
+package xyz.squig;
+
+import java.util.*;
 public class MoveCalculator {
     MoveCalculator() {
     }
@@ -749,13 +752,15 @@ public class MoveCalculator {
             case 19: // Empty Square
                 return list;
         }
+
+        return list;
     }
 
-    public bool checkCalculator(int x, int y, Board moveBoard) {
+    public Boolean checkCalculator(int x, int y, Board moveBoard) {
 
-        LinkedList * temp;
-        Vector<int> moveVector;
-        Vector<int> returnedVector;
+        LinkedList  temp;
+        Vector<Integer> moveVector = new Vector<Integer>();
+        Vector<Integer> returnedVector;
 
         for (int e = 0; e < 8; e++) {
             for (int i = 0; i < 8; i++) {
@@ -764,10 +769,10 @@ public class MoveCalculator {
                 moveVector.addAll(returnedVector);
             }
         }
-        for (int i = 0; i < moveVector.size(); i) {
+        for (int i = 0; i < moveVector.size(); i++) {
             int a = moveVector.get(i);
             int b = moveVector.get(i + 1);
-            i = i + 2;
+            i++;
             if (x == a && y == b) {
                 return true;
             }
