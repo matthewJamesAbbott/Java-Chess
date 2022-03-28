@@ -53,6 +53,14 @@ public class Game {
         gameBoard.setSquare(7,7,"Black Right Rook");
     }
 
+    public void engineMove(){
+        Engine moveEngine = new Engine();
+        int[] moveArray;
+        moveArray = moveEngine.resolveMove(gameBoard);
+        gameBoard.setSquare(moveArray[2], moveArray[3], gameBoard.returnSquare(moveArray[0], moveArray[1]));
+        gameBoard.setSquare(moveArray[0], moveArray[1], "Empty");
+    }
+
     public void printBoardToTerminal() {
 
         int a = 1;

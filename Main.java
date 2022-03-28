@@ -300,6 +300,8 @@ public class Main {
                 inputScanner.nextLine();
                 chess.movePiece(x, y, xa, ya);
                 chess.printBoardToTerminal();
+                chess.engineMove();
+                chess.printBoardToTerminal();
             }
         }
     System.exit(0);
